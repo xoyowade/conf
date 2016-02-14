@@ -22,3 +22,12 @@
 [submodule "emacs/my-plugin/p4.el"]
 	path = emacs/my-plugin/p4.el
 	url = git@github.com:gareth-rees/p4.el.git
+[submodule "emacs/my-config/helm"]
+	path = emacs/my-config/helm
+	url = https://github.com/emacs-helm/helm.git
+[submodule "emacs/my-plugin/async"]
+	path = emacs/my-plugin/async
+	url = https://github.com/jwiegley/emacs-async.git
+[submodule "emacs/my-plugin/helm"]
+	path = emacs/my-plugin/helm
+	url = https://github.com/emacs-helm/helm.git

@@ -37,6 +37,7 @@
 (add-to-list 'load-path (concat base-load-path "yasnippet"))
 (add-to-list 'load-path (concat base-load-path "undo-tree"))
 (add-to-list 'load-path (concat base-load-path "p4.el"))
+(add-to-list 'load-path (concat base-load-path "helm"))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; step 2: load external package settings                  ;;
@@ -51,7 +52,8 @@
 (require 'my-auto-complete)
 (require 'my-flymake)
 (require 'my-org)
-(require 'ido)
+;(require 'ido)
+(require 'my-helm)
 (ido-mode t)
 (require 'my-octopress)
 ;(require 'my-workgroups)

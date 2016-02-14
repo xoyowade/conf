@@ -30,6 +30,11 @@ function link {
     ln -s $insdir/$1 ~/$2
 }
 
+###### 1. compile ######
+cd emacs/my-config/helm && make -j4 && cd -
+
+###### 2. build links ######
+
 git=(.gitconfig .gitignore_global)
 for fn in ${git[@]}
 do
