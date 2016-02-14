@@ -9,26 +9,7 @@
 
 ;;; Code:
 
-(defun my-indent-or-complete ()
-  (interactive)
-  (if (looking-at "\\>")
-      (hippie-expand nil)
-    (indent-for-tab-command))
-  )
-
-(defun revert-buffer-no-confirm ()
-  "Refreshes buffer without confirmation."
-  (interactive) (revert-buffer t t)
-  (message "Refreshed buffer."))
-
-(defun revert-all-buffers ()
-  "Refreshes all open buffers from their respective files."
-  (interactive)
-  (dolist (buf (buffer-list))
-    (with-current-buffer buf
-      (when (and (buffer-file-name) (not (buffer-modified-p)))
-	(revert-buffer t t t) )))
-  (message "Refreshed open buffers.") )
+(require 'my-utils)
 
 ;; indent and complete style
 ;(global-set-key [(control tab)] 'my-indent-or-complete)
@@ -75,5 +56,23 @@
 ;; fix confliction with the shortcut of input mothod switch
 (global-set-key (kbd "M-SPC") 'set-mark-command)
  
+;; jump backward/forward by a symbol instead of word
+;; like foo-bar fooBar
+(global-set-key (kbd "M-b") 'backward-symbol)
+(global-set-key (kbd "M-f") 'forward-symbol) 
+
+;; rectangle/vertical insert
+(global-set-key "\C-xri" 'string-insert-rectangle)
+
+;; bind buffer to window 
+(global-set-key "\C-c\C-b" 'toggle-window-dedicated)
+
+;; fix enter key in -nw mode
+;(global-set-key (kbd "RET") [return])
+
+;; open the coresponding include or src file
+(global-set-key "\C-c\C-f" 'open-include-or-src-file)
+
 (provide 'my-key-binding)
 ;;; my-key-binding.el ends here
+

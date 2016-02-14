@@ -11,13 +11,19 @@
 
 (provide 'my-c++-mode)
 
+(require 'google-c-style)
+
 ;; c++ editing style
 (defun my-c++-mode-hook()
-  (c-set-offset 'case-label '0) ; case label should be at same indentation level as the switch statemento
-  (setq tab-width 4 indent-tabs-mode nil)
-  (setq c-basic-offset 4)
+  (c-set-offset 'access-label '-) ; public/private label
+  (setq tab-width 2 indent-tabs-mode nil)
+  (setq c-basic-offset 2)
+  (c-set-offset 'inextern-lang '2) ; extern block
   ;(c-set-style "bsd")
   ;; (define-key c++-mode-map [f3] 'replace-regexp)
+
+  ;; auto load which funtion mode
+  (which-func-mode t)
 )
 
 (add-hook 'c++-mode-hook 'my-c++-mode-hook)
@@ -26,4 +32,6 @@
 (add-to-list 'auto-mode-alist '("\\.cc\\'" . c++-mode))
 (add-to-list 'auto-mode-alist '("\\.H\\'" . c++-mode))
 (add-to-list 'auto-mode-alist '("\\.hpp\\'" . c++-mode))
+; for RT project
+(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 ;;; my-c++-mode.el ends here
