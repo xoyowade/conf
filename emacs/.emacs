@@ -37,11 +37,13 @@
 (add-to-list 'load-path (concat base-load-path "yasnippet"))
 (add-to-list 'load-path (concat base-load-path "undo-tree"))
 (add-to-list 'load-path (concat base-load-path "p4.el"))
+(add-to-list 'load-path (concat base-load-path "helm"))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; step 2: load external package settings                  ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (add-to-list 'load-path (concat base-config-path "external"))
+(require 'my-package)
 (require 'my-color-theme)
 ;; (require 'my-ecb)
 ;; (require 'my-cedet)
@@ -51,14 +53,15 @@
 (require 'my-auto-complete)
 (require 'my-flymake)
 (require 'my-org)
-(require 'ido)
-(ido-mode t)
+;(require 'ido)
+;(ido-mode t)
+(require 'my-helm)
 (require 'my-octopress)
-;(require 'my-workgroups)
+(require 'my-workgroups)
 ;; (require 'my-desktop)
 (require 'my-yasnippet)
 ;(require 'my-p4)
-(require 'my-package)
+(require 'my-projectile)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; step 3: load modes settings                             ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
