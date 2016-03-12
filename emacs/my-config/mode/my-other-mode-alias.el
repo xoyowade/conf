@@ -39,6 +39,7 @@
 (add-to-list 'auto-mode-alist '("\\.md\\'" . emacs-lisp-mode))
 (add-to-list 'auto-mode-alist '("\\.el\\'" . emacs-lisp-mode))
 (add-to-list 'auto-mode-alist '("\\.py$" . python-mode))
+(add-to-list 'auto-mode-alist '("\\.pyx$" . python-mode))
 (add-to-list 'auto-mode-alist '("[Mm]akefile"  . makefile-mode))
 (add-to-list 'auto-mode-alist '("[Mm]akefrag"  . makefile-mode))
 (add-to-list 'auto-mode-alist '("\\.mk\\'" . makefile-mode))

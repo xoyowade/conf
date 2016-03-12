@@ -39,6 +39,7 @@ if has("autocmd")
   " Also load indent files, to automatically do language-dependent indenting.
   filetype plugin indent on
   augroup filetype
+    au! BufRead,BufNewFile *.csv,*.csv.gz setfiletype csv
     au! BufRead,BufNewFile *.proto setfiletype proto
   augroup end
   autocmd FileType apache     setlocal sw=4 sts=4 ts=4 et
@@ -121,6 +122,8 @@ colors relaxedgreen
 call pathogen#infect()
 
 set cursorline
+" use this cmd to change highlight style
+" :hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 
 " x window clipboard slows down the startup time when the x window connection is slow
 " so just disable this feature when slow
