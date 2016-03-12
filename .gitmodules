@@ -31,3 +31,6 @@
 [submodule "emacs/my-plugin/helm"]
 	path = emacs/my-plugin/helm
 	url = https://github.com/emacs-helm/helm.git
+[submodule "emacs/spacemacs"]
+	path = emacs/spacemacs
+	url = git@github.com:xoyowade/spacemacs.git
