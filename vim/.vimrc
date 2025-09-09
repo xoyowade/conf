@@ -31,7 +31,7 @@ set autoindent   " auto indent
 set smartindent  " set same amount of indent when insert new line
 set cindent      " start c lang indent mode
 " tab indent setting
-set tabstop=2 shiftwidth=2 softtabstop=0 et
+set tabstop=4 shiftwidth=4 softtabstop=0 et smarttab
 if has("autocmd")
   " Enable file type detection.
   " Use the default filetype settings, so that mail gets 'tw' set to 72,
@@ -121,7 +121,7 @@ colors relaxedgreen
 "pathogen
 call pathogen#infect()
 
-set cursorline
+"set cursorline
 " use this cmd to change highlight style
 " :hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 
@@ -130,7 +130,9 @@ set cursorline
 set clipboard=exclude:.*
 
 set background=dark
-colorscheme solarized
+"colorscheme solarized
 augroup filetype
     autocmd! BufRead,BufNewFile BUILD set filetype=blade
 augroup end
+
+set paste

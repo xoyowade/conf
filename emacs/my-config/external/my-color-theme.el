@@ -11,9 +11,9 @@
      (color-theme-initialize)
      (if (< (display-color-cells) 20)
 	   (color-theme-tty-dark)
-       (color-theme-solarized-dark))
+;       (color-theme-solarized-dark))
 ;       (color-theme-solarized-light))
-;      (color-theme-billw))
+      (color-theme-billw))
 ))
 
 ;; font

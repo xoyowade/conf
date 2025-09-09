@@ -36,8 +36,8 @@
 (add-to-list 'load-path (concat base-load-path "workgroups"))
 (add-to-list 'load-path (concat base-load-path "yasnippet"))
 (add-to-list 'load-path (concat base-load-path "undo-tree"))
-(add-to-list 'load-path (concat base-load-path "p4.el"))
-(add-to-list 'load-path (concat base-load-path "helm"))
+;(add-to-list 'load-path (concat base-load-path "p4.el"))
+;(add-to-list 'load-path (concat base-load-path "helm"))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; step 2: load external package settings                  ;;
@@ -55,7 +55,7 @@
 (require 'my-org)
 ;(require 'ido)
 ;(ido-mode t)
-(require 'my-helm)
+;(require 'my-helm)
 (require 'my-octopress)
 (require 'my-workgroups)
 ;; (require 'my-desktop)

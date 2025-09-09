@@ -19,3 +19,9 @@
 	excludesfile = ~/.gitignore_global
 [push]
 	default = matching
+#[http "https://github.com"]
+#	proxy = https://xoyo:18601737939@xoyo.space:1443
+#	sslVerify = false
+#[http "https://github.com"]
+#  proxy = http://huibiu-ds218:8080
+#	sslVerify = false
