@@ -119,3 +119,8 @@ export C_INCLUDE_PATH=$HOME/usr/local/include:$C_INCLUDE_PATH
 export CPLUS_INCLUDE_PATH=$HOME/usr/local/include:$CPLUS_INCLUDE_PATH
 
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+source "$HOME/.cargo/env"
+
+export ANTHROPIC_AUTH_TOKEN=sk-FAYoedjxHrG9Ymzl2iawayKlP6ULnkrmDTnwpwedEBNweG54
+export ANTHROPIC_BASE_URL=https://club.claudecode.site
+export CLAUDE_CODE_MAX_OUTPUT_TOKENS=32000
