@@ -23,3 +23,5 @@
 	proxy = http://cangming:cm_nexxus610D@23.165.40.148:8123
 [https]
 	proxy = http://cangming:cm_nexxus610D@23.165.40.148:8123
+[pull]
+	rebase = false
